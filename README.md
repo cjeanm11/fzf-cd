@@ -8,7 +8,7 @@
 
 ## Installation
 
-To install `fcd`, clone or download the script to your preferred directory using `git clone https://github.com/cjeanm11/fzf-cd.git`, make it executable with `chmod +x fzd-cd.sh`, and add the script's location to your system's PATH environment variable by running `export PATH=$PATH:/path/to/directory`, where you replace `/path/to/directory` with the actual directory path where you've placed the `fcd` script. You can find an exemple here: [https://github.com/cjeanm11/config](config)
+To install `fcd`, clone or download the script to your preferred directory using `git clone https://github.com/cjeanm11/fzf-cd.git`, make it executable with `chmod +x fzd-cd.sh`, and add the script's location to your system's PATH environment variable by running `export PATH=$PATH:/path/to/directory`, where you replace `/path/to/directory` with the actual directory path where you've placed the `fcd` script. You can find an exemple [here](https://github.com/cjeanm11/config).
 
 ## Usage
 
