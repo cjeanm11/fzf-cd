@@ -27,11 +27,7 @@ fcd() {
     elif [[ "$1" == "-g" || "$1" == "-go" || "$1" == "-goto" ]]; then # goto to a bookmarked path
         goto_bookmark "$2"
     elif [[ "$1" == "-add" || "$1" == "-a" ]]; then # add to bookmarks
-        if [ -z "$2" ]; then
-            echo "Usage: fcd add <directory>"
-        else
-            add_to_bookmarks "$2"
-        fi
+        add_to_bookmarks "$2"
     elif [[ "$1" == "-remove" || "$1" == "-r" || "$1" == "-rm" ]]; then # rm from bookmarks
         if [ -z "$2" ]; then
             echo "Usage: fcd remove <directory>"
