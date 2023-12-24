@@ -63,6 +63,6 @@ To use `fcd`, follow these commands:
   Bookmarked Directories:
   [1] - /Users/cjeanm/code/zig
   Enter the number of the bookmarked path you want to navigate to: 
-  1                                                  # Enter bookmark number.
+  1                                                   # Enter bookmark number.
   Navigated to /Users/cjeanm/code/zig
   zig(master*)$ 
