@@ -1,0 +1,11 @@
+cron.yaml
+build
+target
+webview
+*.pyc
+*.sublime-workspace
+.idea
+*.rej
+.coverage
+app/tools/temp_*.py
+app/tools/*/temp_*.py
