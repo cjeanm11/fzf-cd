@@ -28,19 +28,19 @@ To use `fcd`, follow these commands:
 - To remove a directory from your bookmarks, use the command:
 
   ```bash
-    fcd -remove /path/to/directory # option: -rm, -r
+  fcd -remove /path/to/directory # option: -rm, -r
 
 - To list your bookmarked directories, run:
 
   ```bash
-    fcd -list # optional tag: -ls, -l
+  fcd -list # optional tag: -ls, -l
 
 ### Directory Stack
 
 - To push the current directory onto the stack, use the command:
 
   ```bash
-    fcd -push # optional tag: -pu
+  fcd -push # optional tag: -pu
 
 - To pop and navigate to the top directory on the stack, use:
 
