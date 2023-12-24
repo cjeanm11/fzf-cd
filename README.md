@@ -23,17 +23,22 @@ To use `fcd`, follow these commands:
 - To add a directory to your bookmarks, use the command:
 
   ```bash
-  fcd -add /path/to/directory # option: -a
+  fcd -add /path/to/directory # option tag: -a
 
 - To remove a directory from your bookmarks, use the command:
 
   ```bash
-  fcd -remove /path/to/directory # option: -rm, -r
+  fcd -remove /path/to/directory # option tag: -rm, -r
 
 - To list your bookmarked directories, run:
 
   ```bash
-  fcd -list # optional tag: -ls, -l
+  fcd -list # option tag: -ls, -l
+
+- To navigate to a bookmarked directory, use the command:
+
+  ```bash
+  fcd -goto bookmark_number # option tag: -g, -go
 
 ### Directory Stack
 
