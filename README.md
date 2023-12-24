@@ -55,14 +55,14 @@ To use `fcd`, follow these commands:
 ### Exemple usage
 
   ```bash
-  ~(master*)$ fcd                                                       # Fuzzy find and change directory.
-  zig(master*)$ fcd -a                                                  # Add working directory as a bookmark.
+  ~(master*)$ fcd                                     # Fuzzy find and change directory.
+  zig(master*)$ fcd -a                                # Add working directory as a bookmark.
   Added /Users/cjeanm/code/zig to bookmarks.
-  zig(master*)$ cd ~                                                    # Go back to home directory.
-  ~(master*)$ fcd -g                                                    # Go to a selected bookmark.
+  zig(master*)$ cd ~                                  # Go back to home directory.
+  ~(master*)$ fcd -g                                  # Go to a selected bookmark.
   Bookmarked Directories:
   [1] - /Users/cjeanm/code/zig
   Enter the number of the bookmarked path you want to navigate to: 
-  1                                                                     # Enter bookmark number
+  1                                                  # Enter bookmark number.
   Navigated to /Users/cjeanm/code/zig
   zig(master*)$ 
