@@ -20,37 +20,37 @@ To use `fcd`, follow these commands:
 
 ### Bookmarks
 
-- To add a directory to your bookmarks, use the command:
+- Add a directory to your bookmarks. If no second argument is provided, it will default to the current working directory.
 
   ```bash
-  fcd -add /path/to/directory # option tag: -a
+  fcd -add /path/to/directory     # -a
 
-- To remove a directory from your bookmarks, use the command:
-
-  ```bash
-  fcd -remove /path/to/directory # option tag: -rm, -r
-
-- To list your bookmarked directories, run:
+- Remove a directory from your bookmarks.
 
   ```bash
-  fcd -list # option tag: -ls, -l
+  fcd -remove /path/to/directory  # -rm, -r
 
-- To navigate to a bookmarked directory, use the command:
+- List your bookmarked directories.
 
   ```bash
-  fcd -goto bookmark_number # option tag: -g, -go
+  fcd -list                       # -ls, -l
+
+- Navigate to a bookmarked directory. If no second argument is provided, it will default to an interactive input reader.
+
+  ```bash
+  fcd -goto bookmark_number       # -g, -go
 
 ### Directory Stack
 
-- To push the current directory onto the stack, use the command:
+- Push the current directory onto the stack.
 
   ```bash
-  fcd -push # optional tag: -pu
+  fcd -push                       # -pu
 
-- To pop and navigate to the top directory on the stack, use:
+- Pop and navigate to the top directory on the stack.
 
   ```bash
-  fcd -pop # optional tag: -pp
+  fcd -pop                        # -pp
 
 ### Exemple usage
 
