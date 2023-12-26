@@ -1,4 +1,4 @@
-# fcd - Directory Navigation and Bookmarking
+# fzf-cd
 
 This script provides directory navigation and bookmarking using a command-line fuzzy finder.
 ## Prerequisites
