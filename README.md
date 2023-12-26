@@ -13,8 +13,8 @@ Clone or download the script using `git clone https://github.com/cjeanm11/fzf-cd
 
 - **Navigating with Fuzzy Search:** `fcd` without arguments.
 - **Listing Bookmarks:** `fcd -l`
-- **Adding a Bookmark Path:** `fcd -a <directory-path>`. If no argument is provided, it will use the current working directory as the default path for the bookmark.
-- **Removing a Bookmark Path:** `fcd -r <directory-path>`
+- **Adding Bookmark Paths:** `fcd -a <directory-path>`. If no argument is provided, it will use the current working directory as the default path for the bookmark.
+- **Removing Bookmark Paths:** `fcd -r <directory-path>` and `fcd -r --all` to remove all bookmarks.
 - **Go to a Bookmark:** `fcd -g <bookmark-number>`. If no second argument is provided, t will prompt for an interactive input.
 - **Pushing Current Directory:** `fcd -push`
 - **Popping Directory:** `fcd -pop`
