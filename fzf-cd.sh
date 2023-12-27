@@ -135,7 +135,7 @@ add_bookmark() {
     # TODO sanitize, check
     local shell_name=$(ps -p $$ | awk "NR==2{print \$NF}")
     shell_name="${shell_name#-}"
-    bm_to_add="fcd -a \"$absolute_path\" 1> /dev/null"
+    bm_to_add="fcd -a \"${absolute_path}\" 1>/dev/null"
     if ! grep "$bm_to_add" ~/.${shell_name}rc; then
         {
             chmod +w ~/.${shell_name}rc
@@ -154,15 +154,22 @@ list_bookmarks() {
         return
     fi
 
+    local shell_name=$(ps -p $$ | awk "NR==2{print \$NF}")
+    shell_name="${shell_name#-}"
+    local shift=1
+    if [[ "$shell_name" == "bash" ]]; then
+        shift=0
+    fi
+
     echo "Bookmarked Directories:"
     for ((i = 0; i < $bookmark_count; i++)); do
-        local bookmarked_dir="${bookmarks[i+1]}"
+        local bookmarked_dir="${bookmarks[i+shift]}"
 
         if [[ -d "$bookmarked_dir" ]]; then
-            echo "  [$((i + 1))] - $bookmarked_dir"
+            echo "  [$((i + shift))] - $bookmarked_dir"
         else
             # TODO if path happens to be invalid remove them from bm list and rc file.
-            echo "  [$((i + 1))] - $bookmarked_dir (Invalid path)"
+            echo "  [$((i + shift))] - $bookmarked_dir (Invalid path)"
         fi
     done
 }
@@ -220,15 +227,22 @@ goto_bookmark() {
         return 1
     fi
 
-    local index=$((choice - 1))
-
-    # Valid the index
-    if [[ $index -lt 0 || $index -ge ${#bookmarks[@]} ]]; then
-        echo "Invalid choice. Please select a valid bookmark number."
-        return 1
+    local shell_name=$(ps -p $$ | awk "NR==2{print \$NF}")
+    shell_name="${shell_name#-}"
+    local shift=1
+    if [[ "$shell_name" == "bash" ]]; then
+        shift=0
     fi
 
-    local selected_path="${bookmarks[index+1]}"
+    local index=$((choice - shift))
+
+    # Valid the index
+    # if [[ $index -lt 0 || $index -ge ${#bookmarks[@]} ]]; then
+    #     echo "Invalid choice. Please select a valid bookmark number."
+    #     return 1
+    # fi
+
+    local selected_path="${bookmarks[index+shift]}"
     selected_path=$(eval echo "$selected_path")
 
     if [[ ! -d "$selected_path" ]]; then
